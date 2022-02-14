@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="./style.css">
+    <title>Movie Seat Booking</title>
+</head>
+<body>
+
+    <div class="theater">
+
+        <div class="introSection">
+            <label> Pick a movie : </label>
+            <select  id="moviePicker">
+                <option id = "Sky High" value = "8">Sky High ($8)</option>
+                <option id = "Predator" value = "10">Predator ($10)</option>
+                <option id = "Home Alone" value = "9">Home Alone ($9)</option>
+                <option id = "Martian" value = "12">Martian ($12)</option>
+            </select>
+        </div>
+
+        <div class="seatOptions">
+            <p id = "a">Selected</p>
+            <p id = "n">N/A</p>
+            <p id = "o">Occupied</p>
+        </div>
+
+        <div class="screen">
+
+        </div>
+
+        <div class="seats">
+
+            <div class="firstCol">
+                <div><span class="uno"></span><span class="uno"></span></div>
+                <div><span class="uno"></span><span class="uno"></span></div>
+                <div><span  style="border-color: white;"></span><span class="uno"></span></div>
+                <div><span class="uno"></span><span class="uno"></span></div>
+                <div><span class="uno"></span><span class="uno"></span></div>
+                <div><span  style="border-color: white;"></span><span class="uno"></span></div>
+            </div>
+            <div class="secondCol">
+                <div><span class="uno"></span><span style="border-color: white;">
+                </span><span class="uno"></span><span class="uno"></span></div>
+                <div><span class="uno"></span><span style="border-color: white;"></span>
+                    <span class="uno"></span> <span class="uno"></span></div>
+                <div><span class="uno"></span><span class="uno"></span><span class="uno"></span><span class="uno"></span></div>
+                <div><span class="uno"></span><span style="border-color: white;"></span><span  style="border-color: white;"></span>
+                    <span class="uno"></span></div>
+                <div><span class="uno"></span><span class="uno"></span><span class="uno"></span><span class="uno"></span></div>
+                <div><span  style="border-color: white;"></span><span class="uno"></span><span class="uno"></span>
+                    <span class="uno"></span></div>
+            </div>
+            <div class="thirdCol">
+                <div><span class="uno"></span><span class="uno"></span></div>
+                <div><span  style="border-color: white;"></span><span class="uno"></span></div>
+                <div><span class="uno"></span><span class="uno"></span></div>
+                <div><span class="uno"></span><span class="uno"></span></div>
+                <div><span class="uno"></span><span class="uno"></span></div>
+                <div><span  style="border-color: white;"></span><span class="uno"></span></div>
+            </div>
+
+        </div>
+
+        <div class="lastDiv">
+            <p>You have selected <span id = "seatCount">0</span> seats for a price of $<span id = "netValue">0</span> dollars</p>
+        </div>
+
+    </div>
+
+    <script src = "./main.js"></script>
+</body>
+</html>
