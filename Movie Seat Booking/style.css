@@ -1,0 +1,183 @@
+*{
+    margin : 0rem;
+    padding : 0rem;
+    box-sizing : borer-box;
+}
+
+:root{
+    --bodyBck : #242333;
+    --selectColor : #6FEAF6;
+    --occupiedColor : white;
+    --emptyColor : #444451;
+    --seatDecision : #343342;
+}
+
+body{
+    background-color: var(--bodyBck);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.theater{
+    width : 60%;
+    perspective: 800px;
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    /* background-color: red; */
+}
+
+.introSection label{
+    color : white;
+    font-size: 1.2rem;
+}
+
+#moviePicker{
+    width : 20%;
+    padding : .1rem .5rem;
+    margin-left : 1.5rem;
+}
+
+@media (max-width : 570px){
+    #moviePicker{
+        width : 80%;
+        margin-top : .75rem;
+        padding : .5rem;
+    }
+}
+
+@media (min-width : 571px) and (max-width : 1200px){
+    #moviePicker{
+        width : 40%;
+        padding : .5rem;
+    }
+}
+
+.seatOptions{
+    display: flex;
+    justify-content: space-between;
+    background-color: #17171d;
+    color : grey;
+    width : 35%;
+    font-size : 1rem;
+    margin : 1.5rem auto;
+    padding : .45rem;
+    border-radius: 5px;
+}
+
+.seatOptions p{
+    display: inline-block;
+    padding : .3rem 1.5rem;
+    position: relative;
+    font-size : .9rem;
+}
+
+.seatOptions p::before{
+    position: absolute;
+    content : "";
+    top : 50%;
+    left : 0;
+    transform: translateY(-60%);
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+}
+
+@media (max-width : 570px){
+    .seatOptions{
+        width : 100%;
+    }
+    .seatOptions p{
+        padding : .3rem 1.2rem;
+        font-size: .8rem;
+    }
+}
+
+@media (min-width : 571px) and (max-width : 1200px){
+    .seatOptions{
+        width : 60%;
+    }
+}
+
+#a::before{
+    border : 8px solid cyan;
+}
+
+#n::before{
+    border : 8px solid var(--emptyColor);
+}
+
+#o::before{
+    border : 8px solid white;
+}
+
+.screen{
+    width : 40%;
+    height : 100px;
+    background-color: white;
+    margin : auto;
+    box-shadow: 3px 0px 10px rgba(255,255,255,0.7), 0px -2px 6px rgba(255,255,255,0.7);
+    transform: rotate3d(1,0,0,-30deg);
+}
+
+@media (max-width : 570px){
+    .screen{
+        width : 90%;
+    }
+}
+
+@media (min-width : 571px) and (max-width : 1200px){
+    .screen{
+        width : 55%;
+    }
+}
+
+.seats{
+    width : 38%;
+    margin : 1rem auto;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap : .6rem;
+}
+
+@media (max-width : 570px){
+    .seats{
+        width : 100%;
+    }
+}
+
+@media (min-width : 571px) and (max-width : 1200px){
+    .seats{
+        width : 55%;
+    }
+}
+
+.firstCol div, .secondCol div, .thirdCol div{
+    display: flex;
+    justify-content: space-evenly;
+    margin: .65rem 0rem;
+}
+
+.firstCol span,.secondCol span, .thirdCol span{
+    border : 8px solid var(--emptyColor);
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+}
+
+.firstCol span.selected, .secondCol span.selected, .thirdCol span.selected{
+    border : 8px solid cyan;
+}
+
+.uno:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.lastDiv{
+    color : white;
+}
+
+.lastDiv span{
+    color : var(--selectColor);
+}
